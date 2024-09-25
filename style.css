@@ -30,7 +30,8 @@ h1 {
 /* FORM */
 .contact-form {
   background: white;
-  width: 670px;
+
+  width: 720px;
   height: 710px;
   border-radius: 15px;
   overflow: scroll;
@@ -42,6 +43,10 @@ h1 {
   align-items: center;
   flex-direction: column;
   padding: 0px 40px 30px 40px;
+}
+
+#us {
+  margin-left: 20px;
 }
 
 label {
@@ -132,8 +137,7 @@ input {
   align-items: center;
   flex-direction: column;
   height: 10px;
-
-  margin-top: 15px;
+  marg-15px;
   margin-bottom: 15px;
   margin-left: -280px;
 }
