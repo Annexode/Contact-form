@@ -1,70 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Contact form</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css" />
-  <title>Contact form</title>
-</head>
-
-<body>
-  <div class="container">
-    <div class="contact-form">
-      <h1>Contact us</h1>
-      <form class="form">
-        
-        <div class="contact names">
-          <div class="first-name">
-            <label for="first-name">First Name *</label>
-            <input type="text" name="first name" id="first-name" required />
+  <body>
+    <div class="container">
+      <div class="contact-form">
+        <div id="errors"></div>
+        <h1>Contact us</h1>
+        <form id="form" class="form">
+          <div class="contact names">
+            <div class="first-name">
+              <label for="firstName">First Name *</label>
+              <input type="text" name="first name" id="firstName" />
+              <span id="firstName_error"></span>
+            </div>
+            <div class="last-name">
+              <label for="lastName">Last Name *</label>
+              <input type="text" name="last name" id="lastName" />
+              <span id="lastName_error"></span>
+            </div>
           </div>
-          <div class="last-name">
-            <label for="last-name">Last Name *</label>
-            <input type="text" name="last name" id="last-name" required />
+          <br />
+          <div class="contact email-adress">
+            <label for="email-adress">Email adress *</label>
+            <input
+              type="email"
+              id="emailAdress"
+              placeholder="Email address"
+              title="Email address"
+            />
+            <span id="emailAdress_error"></span>
           </div>
-        </div>
-        <br>
-        <div class="contact email-adress">
-          <label for="email-adress" >Email adress *</label>
-          <input type="email" id="email-adress" required/>
-        </div>
+          <div id="enqurries">
+            <div class="support">
+              <input
+                type="radio"
+                value="General enquiry"
+                name="enquiry"
+                id="generalEnquiry"
+              />
+              <label for="general-enquiry">General enquiry</label>
+            </div>
 
-        <div id="querry">
-
-          <div class="support">
-            <input type="radio" value="General enquirry" name="">
-            <h4>General enquirry</h4>
+            <div class="support">
+              <input
+                type="radio"
+                value="Support request"
+                name="request"
+                id="supportRequest"
+              />
+              <label for="support-request">Support request</label>
+            </div>
           </div>
-          <div class="support">
-            <input type="radio" value="General enquirry" name="">
-            <h4>Support request</h4>
+          <span id="enquiry_error"></span>
+          <div class="message">
+            <label for="message">Message *</label>
+            <br />
+            <br />
+            <textarea name="" id="message"></textarea>
+            <span id="message_error"></span>
           </div>
-        </div>
+          <br />
+          <div class="consent">
+            <div id="agree">
+              <input type="checkbox" id="consentCheckbox" />
+              <label id="consent-label" for="consent-checkbox"
+                >I consent to being contacted by the them</label
+              >
+            </div>
 
-        <div class="message">
-          <label for="message">Message *</label>
-          <br>
-          <br>
-          <input type="text" id="message">
-        </div>
-          <br>
-        <div class="consent">
-          <input type="checkbox" required>
-          <h3>i consent to being contacted by the them </h3>
-        </div>
-        <br>
-   <button id="submit">Submit</button>
+            <div id="policy-check">
+              <span id="consent_error"></span>
+            </div>
+          </div>
 
-
+          <br />
+          <button type="submit" id="submit">Submit</button>
+        </form>
+      </div>
     </div>
-    </form>
-  </div>
-  </div>
-</body>
-
+    <script src="./app.js"></script>
+  </body>
 </html>
